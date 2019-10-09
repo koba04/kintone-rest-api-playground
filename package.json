@@ -1,0 +1,35 @@
+{
+  "name": "kintone-rest-api-playground",
+  "version": "1.0.0",
+  "description": "A playground for kintone REST API",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "lint": "eslint '**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/koba04/kintone-rest-api-playground.git"
+  },
+  "keywords": [
+    "kintone"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koba04/kintone-rest-api-playground/issues"
+  },
+  "homepage": "https://github.com/koba04/kintone-rest-api-playground#readme",
+  "devDependencies": {
+    "@cybozu/eslint-config": "^7.1.0",
+    "@types/axios": "^0.14.0",
+    "@types/node": "^12.7.12",
+    "eslint": "^6.5.1",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.0"
+  }
+}
