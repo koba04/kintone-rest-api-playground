@@ -1,4 +1,4 @@
-import { KintoneAPIClient } from "./src/KintoneAPIClient";
+import { KintoneAPIClient } from "../src/";
 
 const APP_ID = 2;
 const RECORD_ID = 3;
@@ -22,7 +22,7 @@ const RECORD_ID = 3;
 
   try {
     const res = await client.getRecord(APP_ID, RECORD_ID)
-    console.log(res.data);
+    console.log(res);
   } catch (e) {
     console.error(e);
   }

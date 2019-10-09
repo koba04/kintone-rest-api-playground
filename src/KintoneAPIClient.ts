@@ -13,8 +13,8 @@ export class KintoneAPIClient {
     this.domain = domain;
     this.httpclient = new AxiosHTTPClientImpl();
   }
-  public getRecord(app: number, id: number): Promise<any> {
-    return this.httpclient.get(
+  public getRecord<T extends object>(app: number, id: number): Promise<T> {
+    return this.httpclient.get<T>(
       this.buildUrl("/k/v1/record.json"),
       this.headers,
       { app, id },

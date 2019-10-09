@@ -1,3 +1,3 @@
 export interface HTTPClientInterface {
-  get(url: string, headers: object, params: object): Promise<any>;
+  get<T extends object>(url: string, headers: object, params: object): Promise<T>;
 }

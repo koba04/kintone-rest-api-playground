@@ -7,6 +7,6 @@ export class AxiosHTTPClientImpl implements HTTPClientInterface {
       method: "get",
       data: params,
       headers
-    });
+    }).then(res => res.data);
   }
 }

@@ -4,7 +4,7 @@
   "description": "A playground for kintone REST API",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node index.ts",
+    "start": "echo 'Please run npx ts-node scripts/{file}'",
     "lint": "eslint '**/*.ts'"
   },
   "repository": {
