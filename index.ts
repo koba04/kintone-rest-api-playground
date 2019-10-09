@@ -1,4 +1,7 @@
-import { KintoneAPIClient } from "./KintoneAPIClient";
+import { KintoneAPIClient } from "./src/KintoneAPIClient";
+
+const APP_ID = 2;
+const RECORD_ID = 3;
 
 (async () => {
   const apiToken = process.env.KINTONE_API_TOKEN as string;
@@ -18,7 +21,7 @@ import { KintoneAPIClient } from "./KintoneAPIClient";
   const client = new KintoneAPIClient(apiToken, domain);
 
   try {
-    const res = await client.getRecord(2, 2);
+    const res = await client.getRecord(APP_ID, RECORD_ID)
     console.log(res.data);
   } catch (e) {
     console.error(e);
