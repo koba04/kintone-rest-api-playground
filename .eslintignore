@@ -1,1 +1,3 @@
 packages/kintone-api-client/lib
+packages/kintone-api-client/umd
+packages/kintone-api-client/esm

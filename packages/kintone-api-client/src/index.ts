@@ -1,1 +1,2 @@
-export { KintoneAPIClient } from "./KintoneAPIClient";
+import { KintoneAPIClient } from "./KintoneAPIClient";
+export default KintoneAPIClient;
