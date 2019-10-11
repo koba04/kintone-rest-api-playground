@@ -1,9 +1,8 @@
-import axios from "axios";
 import { HTTPClientInterface } from "./HTTPClientInterface";
 import { AxiosHTTPClientImpl } from "./infra/AxiosHTTPClientImpl";
 
 export class KintoneAPIClient {
-  private headers: object;
+  private headers: {[key: string]: string};
   private domain: string;
   private httpclient: HTTPClientInterface;
   public constructor(apiToken: string, domain: string) {
