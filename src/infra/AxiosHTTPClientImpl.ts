@@ -1,6 +1,6 @@
 import { HTTPClientInterface } from "../HTTPClientInterface";
 import axios from "axios";
-import qs from 'query-string';
+import qs from "query-string";
 
 export class AxiosHTTPClientImpl implements HTTPClientInterface {
   get(url: string, headers: object, params: any) {

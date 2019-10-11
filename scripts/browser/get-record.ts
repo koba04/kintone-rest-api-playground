@@ -1,4 +1,4 @@
-import { KintoneAPIClient } from "../../src"
+import { KintoneAPIClient } from "../../src";
 
 const APP_ID = 2;
 const RECORD_ID = 3;
@@ -14,10 +14,10 @@ const RECORD_ID = 3;
     throw new Error("Please set KINTONE_DOMAIN and rebuild this");
   }
 
-  const client = new KintoneAPIClient(apiToken, domain);
+  const client = new KintoneAPIClient(domain, { type: "session" });
 
   try {
-    const res = await client.getRecord(APP_ID, RECORD_ID)
+    const res = await client.getRecord(APP_ID, RECORD_ID);
     console.log(res);
   } catch (e) {
     console.error(e);

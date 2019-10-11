@@ -18,10 +18,13 @@ const RECORD_ID = 3;
     process.exit(1);
   }
 
-  const client = new KintoneAPIClient(apiToken, domain);
+  const client = new KintoneAPIClient(domain, {
+    type: "token",
+    token: apiToken
+  });
 
   try {
-    const res = await client.getRecord(APP_ID, RECORD_ID)
+    const res = await client.getRecord(APP_ID, RECORD_ID);
     console.log(res);
   } catch (e) {
     console.error(e);

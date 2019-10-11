@@ -1,14 +1,25 @@
 import { HTTPClientInterface } from "./HTTPClientInterface";
 import { AxiosHTTPClientImpl } from "./infra/AxiosHTTPClientImpl";
 
+type HTTPHeader = {
+  [key: string]: string;
+};
+
+export type Auth =
+  | {
+      type: "session";
+    }
+  | {
+      type: "token";
+      token: string;
+    };
+
 export class KintoneAPIClient {
-  private headers: {[key: string]: string};
+  private headers: HTTPHeader;
   private domain: string;
   private httpclient: HTTPClientInterface;
-  public constructor(apiToken: string, domain: string) {
-    this.headers = {
-      "X-Cybozu-API-Token": apiToken,
-    };
+  public constructor(domain: string, auth: Auth) {
+    this.headers = this.buildAuthHeaders(auth);
     this.domain = domain;
     this.httpclient = new AxiosHTTPClientImpl();
   }
@@ -16,7 +27,7 @@ export class KintoneAPIClient {
     return this.httpclient.get<T>(
       this.buildUrl("/k/v1/record.json"),
       this.headers,
-      { app, id },
+      { app, id }
     );
   }
   // Inject a custom HTTP client, which is for testing
@@ -25,5 +36,23 @@ export class KintoneAPIClient {
   }
   private buildUrl(path: string): string {
     return `https://${this.domain}${path}`;
+  }
+  private buildAuthHeaders(auth: Auth): HTTPHeader {
+    switch (auth.type) {
+      case "session":
+        return {
+          "X-Requested-With": "XMLHTTPRequest"
+        };
+      case "token": {
+        return {
+          "X-Cybozu-API-Token": auth.token
+        };
+      }
+      default: {
+        throw new Error(
+          `${(auth as any).type} is not supported authentication type`
+        );
+      }
+    }
   }
 }
