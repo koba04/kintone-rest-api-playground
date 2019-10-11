@@ -1,0 +1,23 @@
+{
+  "name": "browser-scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "webpack": "webpack --mode development",
+    "upload": "kintone-customize-uploader customize-manifest.json",
+    "start": "run-s webpack upload",
+    "watch:webpack": "npm run webpack -- --watch",
+    "watch:upload": "npm run upload -- --watch",
+    "watch": "run-p watch:*"
+  },
+  "dependencies": {
+    "kintone-api-client": "^1.0.0"
+  },
+  "devDependencies": {
+    "@kintone/customize-uploader": "^2.0.5",
+    "ts-loader": "^6.2.0",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9"
+  }
+}

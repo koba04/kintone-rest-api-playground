@@ -1,49 +1,26 @@
 {
-  "name": "kintone-rest-api-playground",
-  "version": "1.0.0",
-  "description": "A playground for kintone REST API",
-  "main": "index.js",
-  "scripts": {
-    "start": "npm-run-all -p run-node run-browser",
-    "run-browser": "run-s webpack upload",
-    "run-node": "ts-node scripts/node/get-record.ts",
-    "upload": "kintone-customize-uploader customize-manifest.json",
-    "watch:upload": "npm run upload -- --watch",
-    "watch": "run-p watch:*",
-    "watch:webpack": "npm run webpack -- --watch",
-    "webpack": "webpack --mode development",
-    "lint": "eslint '**/*.ts'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/koba04/kintone-rest-api-playground.git"
-  },
-  "keywords": [
-    "kintone"
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/koba04/kintone-rest-api-playground/issues"
+  "scripts": {
+    "build": "yarn workspace kintone-api-client build",
+    "run-scripts": "run-p build run-node run-browser",
+    "run-node": "yarn workspace node-scripts start",
+    "run-browser": "yarn workspace browser-scripts start",
+    "lint": "eslint 'packages/*/**/*.ts'",
+    "watch:client": "yarn workspace kintone-api-client watch",
+    "watch:browsers": "yarn workspace browser-scripts watch",
+    "watch": "run-p watch:*"
   },
-  "homepage": "https://github.com/koba04/kintone-rest-api-playground#readme",
+  "repository": "ssh://git@github.com/koba04/kintone-rest-api-playground.git",
+  "author": "Toru Kobayashi <koba0004@gmail.com>",
   "devDependencies": {
     "@cybozu/eslint-config": "^7.1.0",
-    "@kintone/customize-uploader": "^2.0.5",
-    "@types/axios": "^0.14.0",
     "@types/node": "^12.7.12",
-    "@types/query-string": "^6.3.0",
     "eslint": "^6.5.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
-    "ts-loader": "^6.2.0",
-    "ts-node": "^8.4.1",
-    "typescript": "^3.6.4",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9"
-  },
-  "dependencies": {
-    "axios": "^0.19.0",
-    "query-string": "^6.8.3"
+    "typescript": "^3.6.4"
   }
 }
