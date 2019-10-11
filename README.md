@@ -16,9 +16,13 @@ If you run scripts on Node, you have to set the following environment values.
 
 ## kintone-api-client
 
+- `packages/kintone-api-client`
+
 TBA
 
 ## for Node
+
+- `packages/node-scripts`
 
 ```
 yarn run-node
@@ -27,6 +31,8 @@ yarn workspace node-scripts ts-node src/get-record.ts
 ```
 
 ## for Browsers
+
+- `packages/browser-scripts`
 
 It uploads scripts using `webpack` and `@kintone/customize-uploader`
 
