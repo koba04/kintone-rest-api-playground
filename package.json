@@ -4,8 +4,14 @@
   "description": "A playground for kintone REST API",
   "main": "index.js",
   "scripts": {
-    "start": "echo 'Please run npx ts-node scripts/{file}'",
+    "start": "npm-run-all -p run-node run-browser",
+    "run-browser": "run-s webpack upload",
+    "run-node": "ts-node scripts/node/get-record.ts",
     "upload": "kintone-customize-uploader customize-manifest.json",
+    "watch:upload": "npm run upload -- --watch",
+    "watch": "run-p watch:*",
+    "watch:webpack": "npm run webpack -- --watch",
+    "webpack": "webpack --mode development",
     "lint": "eslint '**/*.ts'"
   },
   "repository": {
@@ -28,6 +34,7 @@
     "@types/node": "^12.7.12",
     "@types/query-string": "^6.3.0",
     "eslint": "^6.5.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "ts-loader": "^6.2.0",
     "ts-node": "^8.4.1",

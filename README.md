@@ -13,6 +13,8 @@ You have to set the following environment values.
 ## for Node
 
 ```
+npm run run-node
+// or
 npx ts-node scripts/node/get-record.ts
 ```
 
@@ -21,13 +23,11 @@ npx ts-node scripts/node/get-record.ts
 It uploads scripts using `webpack` and `@kintone/customize-uploader`
 
 ```
-npx webpack --mode development
-npm run upload
+npm run run-browser
 ```
 
 If you'd like to upload scripts automatically, you can use `--watch` options
 
 ```
-npx webpack --mode development --watch
-npm run upload -- --watch
+npm run watch
 ```
