@@ -14,15 +14,12 @@ If you run scripts on Node, you have to set the following environment values.
 - `KINTONE_API_TOKEN` (for node)
 - `KINTONE_DOMAIN` (for node)
 
-## kintone-api-client
-
-- `packages/kintone-api-client`
+## kintone-api-client - [packages/kintone-api-client](https://github.com/koba04/kintone-rest-api-playground/tree/master/packages/kintone-api-client)
 
 TBA
 
-## for Node
+## for Node - [packages/node-scripts](https://github.com/koba04/kintone-rest-api-playground/tree/master/packages/node-scripts)
 
-- `packages/node-scripts`
 
 ```
 yarn run-node
@@ -30,9 +27,7 @@ yarn run-node
 yarn workspace node-scripts ts-node src/get-record.ts
 ```
 
-## for Browsers
-
-- `packages/browser-scripts`
+## for Browsers - [packages/browser-scripts](https://github.com/koba04/kintone-rest-api-playground/tree/master/packages/browser-scripts)
 
 It uploads scripts using `webpack` and `@kintone/customize-uploader`
 
