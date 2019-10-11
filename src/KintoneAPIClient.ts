@@ -7,7 +7,7 @@ export class KintoneAPIClient {
   private httpclient: HTTPClientInterface;
   public constructor(apiToken: string, domain: string) {
     this.headers = {
-      "X-Cybozu-API-Token": apiToken
+      "X-Cybozu-API-Token": apiToken,
     };
     this.domain = domain;
     this.httpclient = new AxiosHTTPClientImpl();

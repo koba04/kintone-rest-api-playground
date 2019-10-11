@@ -1,0 +1,12 @@
+{
+    "app": "2",
+    "scope": "ALL",
+    "desktop": {
+        "js": ["dist/get-record.js"],
+        "css": []
+    },
+    "mobile": {
+        "js": ["dist/get-record.js"],
+        "css": []
+    }
+}

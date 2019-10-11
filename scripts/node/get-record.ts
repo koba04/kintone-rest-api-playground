@@ -1,4 +1,4 @@
-import { KintoneAPIClient } from "../src/";
+import { KintoneAPIClient } from "../../src";
 
 const APP_ID = 2;
 const RECORD_ID = 3;
