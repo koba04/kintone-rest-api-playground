@@ -6,16 +6,12 @@ const RECORD_ID = 3;
 (async () => {
   const apiToken = process.env.KINTONE_API_TOKEN as string;
   if (!apiToken) {
-    console.error("Please set KINTONE_API_TOKEN");
-    // eslint-disable-next-line no-process-exit
-    process.exit(1);
+    throw new Error("Please set KINTONE_API_TOKEN and rebuild this");
   }
 
   const domain = process.env.KINTONE_DOMAIN as string;
   if (!domain) {
-    console.error("Please set KINTONE_DOMAIN");
-    // eslint-disable-next-line no-process-exit
-    process.exit(1);
+    throw new Error("Please set KINTONE_DOMAIN and rebuild this");
   }
 
   const client = new KintoneAPIClient(apiToken, domain);
