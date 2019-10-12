@@ -18,7 +18,7 @@ export class KintoneAPIClient {
   private headers: HTTPHeader;
   private domain: string;
   private httpclient: HTTPClientInterface;
-  public constructor(domain: string, auth: Auth) {
+  public constructor({ domain, auth }: { domain: string; auth: Auth }) {
     this.headers = this.buildAuthHeaders(auth);
     this.domain = domain;
     this.httpclient = new AxiosHTTPClientImpl();

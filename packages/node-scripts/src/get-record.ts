@@ -18,9 +18,12 @@ const RECORD_ID = 3;
     process.exit(1);
   }
 
-  const client = new KintoneAPIClient(domain, {
-    type: "token",
-    token: apiToken
+  const client = new KintoneAPIClient({
+    domain,
+    auth: {
+      type: "token",
+      token: apiToken
+    }
   });
 
   try {

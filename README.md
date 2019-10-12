@@ -16,7 +16,7 @@ If you run scripts on Node, you have to set the following environment values.
 
 ## kintone-api-client - [packages/kintone-api-client](https://github.com/koba04/kintone-rest-api-playground/tree/master/packages/kintone-api-client)
 
-TBA
+See the [README.md](https://github.com/koba04/kintone-rest-api-playground/tree/master/packages/kintone-api-client)
 
 ## for Node - [packages/node-scripts](https://github.com/koba04/kintone-rest-api-playground/tree/master/packages/node-scripts)
 
