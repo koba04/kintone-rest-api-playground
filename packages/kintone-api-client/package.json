@@ -13,7 +13,8 @@
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.json",
     "build:umd": "rollup -c rollup.config.js",
-    "build": "run-p build:*",
+    "build": "npm-run-all -s clean -p build:*",
+    "clean": "rimraf lib esm umd",
     "watch:cjs": "tsc -p tsconfig.cjs.json -w",
     "watch:esm": "tsc -w",
     "watch": "run-p watch:*"
@@ -22,7 +23,11 @@
     "@types/axios": "^0.14.0",
     "@types/query-string": "^6.3.0",
     "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0",
     "rollup": "^1.23.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "typescript": "^3.6.4"
   },
   "dependencies": {
