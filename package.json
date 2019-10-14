@@ -4,14 +4,14 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "yarn workspace kintone-api-client build",
+    "build": "yarn workspace @koba04/kintone-api-client build",
     "run-scripts": "run-p build run-node run-browser",
     "run-node": "yarn workspace node-scripts start",
     "run-browser": "yarn workspace browser-scripts start",
     "lint:eslint": "eslint 'packages/*/**/*.ts'",
     "lint:ts": "tsc --noEmit",
     "lint": "run-p lint:*",
-    "watch:client": "yarn workspace kintone-api-client watch",
+    "watch:client": "yarn workspace @koba04/kintone-api-client watch",
     "watch:browsers": "yarn workspace browser-scripts watch",
     "watch": "run-p watch:*"
   },

@@ -1,12 +1,17 @@
 {
-  "name": "kintone-api-client",
+  "name": "@koba04/kintone-api-client",
   "version": "1.0.0",
   "main": "lib/index.js",
   "module": "esm/index.js",
+  "files": [
+    "esm",
+    "lib",
+    "emd"
+  ],
   "license": "MIT",
   "scripts": {
     "build:cjs": "tsc -p tsconfig.cjs.json",
-    "build:esm": "tsc",
+    "build:esm": "tsc -p tsconfig.json",
     "build:umd": "rollup -c rollup.config.js",
     "build": "run-p build:*",
     "watch:cjs": "tsc -p tsconfig.cjs.json -w",

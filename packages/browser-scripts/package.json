@@ -2,6 +2,7 @@
   "name": "browser-scripts",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "webpack": "webpack --mode development",
@@ -12,7 +13,7 @@
     "watch": "run-p watch:*"
   },
   "dependencies": {
-    "kintone-api-client": "^1.0.0"
+    "@koba04/kintone-api-client": "^1.0.0"
   },
   "devDependencies": {
     "@kintone/customize-uploader": "^2.0.5",

@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "start": "ts-node src/get-record.ts"
   },
   "dependencies": {
-    "kintone-api-client": "^1.0.0"
+    "@koba04/kintone-api-client": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^12.7.12",
