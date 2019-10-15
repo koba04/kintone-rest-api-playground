@@ -11,6 +11,7 @@
     "lint:eslint": "eslint 'packages/*/**/*.ts'",
     "lint:ts": "tsc --noEmit",
     "lint": "run-p lint:*",
+    "test": "yarn workspace @koba04/kintone-api-client test",
     "watch:client": "yarn workspace @koba04/kintone-api-client watch",
     "watch:browsers": "yarn workspace browser-scripts watch",
     "watch": "run-p watch:*"

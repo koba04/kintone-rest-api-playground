@@ -15,6 +15,7 @@
     "build:umd": "rollup -c rollup.config.js",
     "build": "npm-run-all -s clean -p build:*",
     "clean": "rimraf lib esm umd",
+    "test": "jest",
     "watch:cjs": "tsc -p tsconfig.cjs.json -w",
     "watch:esm": "tsc -w",
     "watch": "run-p watch:*"
