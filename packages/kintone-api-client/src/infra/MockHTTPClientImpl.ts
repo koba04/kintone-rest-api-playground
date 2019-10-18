@@ -1,7 +1,14 @@
 import { HTTPClientInterface } from "../HTTPClientInterface";
 
+type Request = {
+  method: 'get',
+  url: string,
+  headers: { [key: string]: string },
+  params: object
+}
+
 export class MockHTTPClientImpl implements HTTPClientInterface {
-  private calls: object[];
+  private calls: Request[];
   private mockResponses: object[];
   constructor() {
     this.calls = [];
@@ -16,7 +23,7 @@ export class MockHTTPClientImpl implements HTTPClientInterface {
     });
     return this.returnMockResponse();
   }
-  public getCalls(): object[] {
+  public getCalls(): Request[] {
     return this.calls;
   }
   // TODO: type correctly

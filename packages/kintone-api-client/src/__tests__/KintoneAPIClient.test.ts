@@ -21,20 +21,29 @@ describe("KintoneAPIClient", () => {
     });
     const mockHTTPClient = new MockHTTPClientImpl();
     client.setHTTPClient(mockHTTPClient);
-
     await client.getRecord(1, 2);
-
-    expect(mockHTTPClient.getCalls()).toEqual([{
-      method: 'get',
-      url: 'https://example.com/k/v1/record.json',
-      headers: {
-        "X-Requested-With": "XMLHTTPRequest",
-      },
-      params: {
-        app: 1,
-        id: 2
-      }
-    }])
-
+    expect(mockHTTPClient.getCalls()[0].url).toEqual('https://example.com/k/v1/record.json')
   });
+
+  describe('auth', () => {
+    it.todo('should set headers for session auth');
+    it.todo('should set headers for token auth');
+    it.todo('should throw an error if it receives an unsupported auth type');
+  });
+
+  describe('getRecord', () => {
+    let client: KintoneAPIClient;
+    beforeEach(() => {
+      client = new KintoneAPIClient({
+        domain: 'example.com',
+        auth: {
+          type: 'session'
+        }
+      });
+      const mockHTTPClient = new MockHTTPClientImpl();
+      client.setHTTPClient(mockHTTPClient);
+    })
+    it.todo('should request to the URL to get a record');
+    it.todo('should pass appId and recordId as the params');
+  })
 });
