@@ -50,7 +50,7 @@ export class KintoneAPIClient {
       }
       default: {
         throw new Error(
-          `${(auth as any).type} is not supported authentication type`
+          `${(auth as any).type} is not a supported auth type`
         );
       }
     }
