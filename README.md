@@ -1,4 +1,6 @@
 # kintone-rest-api-playground
+![](https://github.com/koba04/kintone-rest-api-playground/workflows/CI/badge.svg)
+
 A playground for kintone REST API
 
 ## Setup
