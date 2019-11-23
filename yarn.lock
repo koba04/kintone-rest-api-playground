@@ -688,10 +688,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@cybozu/eslint-config@^7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@cybozu/eslint-config/-/eslint-config-7.1.0.tgz#06244f9b9d0a105c535da7cfc9fc6869bfd2c085"
-  integrity sha512-WFzuElwmWeEaeqLvdu9SPjRpxIACKA4I1ZO74vj3PmHypkzkJLmqM+qziRbGaWfFamHsvMqXcYHFbS1+ng6p5A==
+"@cybozu/eslint-config@^8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@cybozu/eslint-config/-/eslint-config-8.1.0.tgz#759b59eabbfba6d3ab2cd013b8b78b3e7b1d9c69"
+  integrity sha512-X+5o4Hnk4h/OImdqnOqVO82VSVub4ZTLK7hFL92SIyMGWCiMJ89/6zGaZZMGOugmJmEWo5U1uSIwBMyyPBpwTA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.1.0"
     "@typescript-eslint/parser" "^2.1.0"
