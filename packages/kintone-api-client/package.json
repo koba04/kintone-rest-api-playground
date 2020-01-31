@@ -21,8 +21,8 @@
     "watch": "run-p watch:*"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-typescript": "^7.6.0",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
     "@types/axios": "^0.14.0",
     "@types/jest": "^24.0.25",
     "@types/query-string": "^6.3.0",
